@@ -1,0 +1,42 @@
+﻿@model IEnumerable<PizzaNicola_AspNetCore.Models.Entidades.Extra>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Extras</h1>
+
+<p>
+    <a asp-action="InsertExtra" class="btn btn-primary">Agregar Extra +</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.descripcion)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.descripcion)
+            </td>
+            <!--
+            <td>
+                @Html.ActionLink("Editar", "Edit", new { idExtra=item.id }, new{@class="btn btn-warning"})
+                @Html.ActionLink("Eliminar", "Delete", new { idExtra=item.id }, new{@class="btn btn-danger"})
+            </td>
+            -->
+        </tr>
+}
+    </tbody>
+</table>

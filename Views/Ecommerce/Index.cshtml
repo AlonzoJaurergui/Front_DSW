@@ -1,0 +1,31 @@
+﻿@model IEnumerable<PizzaNicola_AspNetCore.Models.Entidades.Insumo>
+
+<link rel="stylesheet" href="~/css/estilos.css" />
+
+<h1>Portal de Insumos</h1>
+<div>
+    <a asp-action="Canasta" asp-controller="Ecommerce" class="btn btn-warning">Ir a la Canasta</a>
+</div>
+<br/>
+
+<div class="portal">
+    @foreach (var item in Model)
+    {
+        <div class="registro">
+            <img class="insumo-img" src="@Url.Content(string.Format("~/imagenes/insumos/{0}.jpg", item.idInsumo))" />
+            <br />
+            <em>Código:</em> @Html.DisplayFor(insumo => item.idInsumo)
+            <br />
+            <em>Tipo:</em> @Html.DisplayFor(insumo => item.nombreInsumo)
+            <br />
+            <em>Marca:</em> @Html.DisplayFor(insumo => item.descripcion)
+            <br />
+            <em>Precio:</em> @Html.DisplayFor(insumo => item.precio)
+            <br />
+            <em>Stock:</em> @Html.DisplayFor(insumo => item.stock)
+            <br />
+
+            @Html.ActionLink("Agregar", "Agregar", new {idInsumo = item.idInsumo})
+        </div>
+    }
+</div>

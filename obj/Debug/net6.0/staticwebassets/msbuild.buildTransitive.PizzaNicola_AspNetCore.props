@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\PizzaNicola_AspNetCore.props" />
+</Project>

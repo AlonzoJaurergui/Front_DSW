@@ -1,0 +1,59 @@
+﻿@model PizzaNicola_AspNetCore.Models.Entidades.Pizza
+
+@{
+    ViewData["Title"] = "InsertPizza";
+}
+
+<h1>Nueva Pizza</h1>
+
+<h4>Ingresar los datos de la pizza</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="InsertPizza">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group">
+                <label asp-for="nombrePizza" class="control-label"></label>
+                <input asp-for="nombrePizza" class="form-control" />
+                <span asp-validation-for="nombrePizza" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ingredientes" class="control-label"></label>
+                <input asp-for="ingredientes" class="form-control" />
+                <span asp-validation-for="ingredientes" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="tamanio" class="control-label"></label>
+                <input asp-for="tamanio" class="form-control" />
+                <span asp-validation-for="tamanio" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="tipoMasa" class="control-label"></label>
+                <input asp-for="tipoMasa" class="form-control" />
+                <span asp-validation-for="tipoMasa" class="text-danger"></span>
+            </div>
+            
+            <div class="form-group">
+                <label asp-for="precio" class="control-label"></label>
+                <input asp-for="precio" class="form-control" />
+                <span asp-validation-for="precio" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="stock" class="control-label"></label>
+                <input asp-for="stock" class="form-control" />
+                <span asp-validation-for="stock" class="text-danger"></span>
+            </div><br/>
+            <div class="form-group">
+                <input type="submit" value="Proceder" class="btn btn-primary" />
+                <a class="btn btn-secondary" asp-controller="Pizza" asp-action="Index">
+                    Regresar
+                </a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    @ViewBag.mensaje
+</div>

@@ -1,0 +1,81 @@
+﻿@model IEnumerable<PizzaNicola_AspNetCore.Models.Entidades.Pizza>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Pizzas Disponibles</h1>
+
+<p>
+    <a class="btn btn-primary" asp-controller="Pizza" asp-action="InsertPizza">
+        Añadir Nueva Pizza
+    </a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.nombrePizza)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ingredientes)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.tamanio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.tipoMasa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.precio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.stock)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.nombrePizza)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ingredientes)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.tamanio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.tipoMasa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.precio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.stock)
+            </td>
+            <td>
+               <a class="btn btn-warning" asp-action="UpdatePizza" asp-route-id="@item.id">Actualizar</a>               
+                @*@Html.ActionLink("Editar", "UpdatePizza", new { id=item.id }, new {@class = "btn btn-warning"})*@
+                @*@Html.ActionLink("Eliminar", "DeletePizza", new { id=item.id }, new {@class = "btn btn-danger"})*@
+                    <a href="#" class="btn btn-danger" onclick="confirmarEliminacion('@item.id')">Eliminar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+<script>
+    function confirmarEliminacion(id) {
+        if (confirm("¿Seguro que deseas eliminar?")) {
+            window.location.href = '/Pizza/DeletePizza?id=' + id;
+        }
+    }
+</script>

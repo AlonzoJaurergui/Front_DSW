@@ -1,0 +1,63 @@
+﻿@model IEnumerable<PizzaNicola_AspNetCore.Models.Entidades.ItemInsumo>
+
+@{
+    ViewData["Title"] = "Canasta";
+}
+
+<h1>Canasta</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.idInsumo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.nombreInsumo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.descripcion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.precio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cantidad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.monto)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.idInsumo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.nombreInsumo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.descripcion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.precio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cantidad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.monto)
+            </td>
+            <td>
+                @Html.ActionLink("Eliminar", "Delete", new { idInsumo=item.idInsumo })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

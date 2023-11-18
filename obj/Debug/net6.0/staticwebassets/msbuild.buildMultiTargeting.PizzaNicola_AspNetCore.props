@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\PizzaNicola_AspNetCore.props" />
+</Project>

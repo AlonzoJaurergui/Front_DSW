@@ -1,0 +1,49 @@
+﻿@model PizzaNicola_AspNetCore.Models.Entidades.Usuario
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_LayoutLogin.cshtml";
+}
+
+<style>
+    .form-signin {
+        margin: 0 auto;
+        max-width: 330px;
+        padding: 15px;
+    }
+
+    h4 {
+        text-align: center;
+    }
+
+    #logo {
+        width: 30%;
+    }
+</style>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <h4>Bienvenido(a)</h4>
+        <br/>
+        <img id="logo" src="~/imagenes/logo_pizza_nicola2.png" />
+    </div>
+</div>
+
+<div class="container">
+    <div class="row justify-content-center">
+        @using (Html.BeginForm("Index", "Login", FormMethod.Post, new { @class = "form-signin" }))
+        {
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+            @Html.TextBoxFor(m => m.login, new { @class = "form-control", placeholder = "Login" })
+            @Html.ValidationMessageFor(m => m.login, "", new { @class = "text-danger" })
+            <br/>
+            @Html.PasswordFor(m => m.password, new { @class = "form-control", placeholder = "Password" })
+            @Html.ValidationMessageFor(m => m.password, "", new { @class = "text-danger" })
+            <br />
+            <input type="submit" value="Acceder" class="btn btn-lg btn-primary" />
+            <a class="btn btn-lg btn-secondary" asp-controller="Registro" asp-action="RegisterUsuario">Registrar</a>
+        }
+    </div>
+</div>
