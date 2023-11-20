@@ -6,5 +6,7 @@ namespace PizzaNicola_AspNetCore.Models.Interfaces
     {
         IEnumerable<Extra> GetExtra();
         Task<string> Insertar(Extra extra);
+        Task<string> Actualizar(Extra extra);
+        Task<string> Eliminar(string id);
     }
 }

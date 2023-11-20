@@ -24,19 +24,24 @@
     <tbody>
 @foreach (var item in Model) {
         <tr>
-            <td>
+            @*<td>
                 @Html.DisplayFor(modelItem => item.id)
-            </td>
+            </td>*@
             <td>
                 @Html.DisplayFor(modelItem => item.descripcion)
             </td>
-            <!--
-            <td>
-                @Html.ActionLink("Editar", "Edit", new { idExtra=item.id }, new{@class="btn btn-warning"})
-                @Html.ActionLink("Eliminar", "Delete", new { idExtra=item.id }, new{@class="btn btn-danger"})
-            </td>
-            -->
+                <td>
+                    <a class="btn btn-warning" asp-action="UpdateExtra" asp-route-id="@item.id">Actualizar</a>
+                    <a href="#" class="btn btn-danger" onclick="confirmarEliminacion('@item.id')">Eliminar</a>
+                </td>
         </tr>
 }
     </tbody>
 </table>
+<script>
+    function confirmarEliminacion(id) {
+        if (confirm("¿Seguro que deseas eliminar?")) {
+            window.location.href = '/Extra/DeleteExtra?id=' + id;
+        }
+    }
+</script>

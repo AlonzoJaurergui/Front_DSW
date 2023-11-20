@@ -63,10 +63,8 @@
                 @Html.DisplayFor(modelItem => item.stock)
             </td>
             <td>
-               <a class="btn btn-warning" asp-action="UpdatePizza" asp-route-id="@item.id">Actualizar</a>               
-                @*@Html.ActionLink("Editar", "UpdatePizza", new { id=item.id }, new {@class = "btn btn-warning"})*@
-                @*@Html.ActionLink("Eliminar", "DeletePizza", new { id=item.id }, new {@class = "btn btn-danger"})*@
-                    <a href="#" class="btn btn-danger" onclick="confirmarEliminacion('@item.id')">Eliminar</a>
+               <a class="btn btn-warning" asp-action="UpdatePizza" asp-route-id="@item.id">Actualizar</a>                               
+               <a href="#" class="btn btn-danger" onclick="confirmarEliminacion('@item.id')">Eliminar</a>
             </td>
         </tr>
 }

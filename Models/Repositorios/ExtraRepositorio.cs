@@ -21,6 +21,38 @@ namespace PizzaNicola_AspNetCore.Models.Repositorios
             _database = client.GetDatabase("pizzeria_nicola_trux");
         }
 
+        public async Task<string> Actualizar(Extra extra)
+        {
+            var extraCollection = _database.GetCollection<Extra>("extra");
+            var filter = Builders<Extra>.Filter.Eq(x => x.id, extra.id);
+            var update = Builders<Extra>.Update
+                .Set(x => x.descripcion, extra.descripcion);                
+            var result = await extraCollection.UpdateOneAsync(filter, update);
+            if (result.IsAcknowledged && result.ModifiedCount > 0)
+            {
+                return "Extra actualizado correctamente en MongoDB.";
+            }
+            else
+            {
+                return "Error al actualizar el extra en MongoDB.";
+            }
+        }
+
+        public async Task<string> Eliminar(string id)
+        {
+            var extraCollection = _database.GetCollection<Extra>("extra");
+            var filter = Builders<Extra>.Filter.Eq(x => x.id, id);
+            var result = await extraCollection.DeleteOneAsync(filter);
+            if (result.IsAcknowledged && result.DeletedCount > 0)
+            {
+                return "Extra eliminada correctamente";
+            }
+            else
+            {
+                return "Hubo un error al eliminar el extra";
+            }
+        }
+
         public IEnumerable<Extra> GetExtra()
         {
             var extrasCollection = _database.GetCollection<Extra>("extra");

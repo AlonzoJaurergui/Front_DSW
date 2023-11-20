@@ -63,5 +63,59 @@ namespace PizzaNicola_AspNetCore.Controllers
             }
             return View("InsertExtra", new Extra());
         }
+
+        public async Task<IActionResult> UpdateExtra(string id)
+        {
+            using (var httpClient = new HttpClient())
+            {
+                httpClient.BaseAddress = new Uri("http://localhost:8080");
+                HttpResponseMessage response = await httpClient.GetAsync($"api/nicola/extras/extraid/{id}");
+                if (response.IsSuccessStatusCode)
+                {
+                    string apiResponse = await response.Content.ReadAsStringAsync();
+                    Extra extra = JsonConvert.DeserializeObject<Extra>(apiResponse);
+                    if (extra == null)
+                    {
+                        // Manejo si el extra no se encuentra
+                        return View("Extra NoEncontrada");
+                    }
+                    return View(extra);
+                }
+                else
+                {
+                    // Manejo del error, puede redirigir a una vista de error o hacer algo más
+                    return View("Error");
+                }
+            }
+
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> UpdateExtra(Extra extra)
+        {
+            try
+            {
+                string mensaje = await _extraR.Actualizar(extra);
+                ViewBag.mensaje = mensaje;
+            }
+            catch (Exception ex)
+            {
+                ViewBag.mensaje = $"Error al actualizar el extra en MongoDB: {ex.Message}";
+            }
+            return View(extra);
+        }
+        public async Task<IActionResult> DeleteExtra(string id)
+        {
+            try
+            {
+                string mensaje = await _extraR.Eliminar(id);
+                ViewBag.mensaje = mensaje;
+            }
+            catch (Exception ex)
+            {
+                ViewBag.mensaje = $"Error al eliminar el extra en MongoDB: {ex.Message}";
+            }
+            return RedirectToAction("Index");
+        }
     }
 }
