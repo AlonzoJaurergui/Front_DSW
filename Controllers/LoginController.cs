@@ -3,22 +3,24 @@ using PizzaNicola_AspNetCore.Models.Entidades;
 using PizzaNicola_AspNetCore.Models.Interfaces;
 using PizzaNicola_AspNetCore.Models.Repositorios;
 using Microsoft.AspNetCore.Http;
+using SharpCompress.Common;
 
 namespace PizzaNicola_AspNetCore.Controllers
 {
     public class LoginController : Controller
     {
+        private readonly UsuarioRepositorio _usuarioR;
+
+        public LoginController(UsuarioRepositorio usuarioRepositorio)
+        {
+            _usuarioR = usuarioRepositorio;
+        }
         private IUsuario iUsuario;
         const string SessionLogin = "_Login";
 
-        public LoginController()
-        {
-            iUsuario = new UsuarioRepositorio();
-        }
-
         public IActionResult Index()
         {
-            string? login = HttpContext.Session.GetString(SessionLogin);
+            string login = HttpContext.Session.GetString(SessionLogin);
             if (login == null)
                 return View(new Usuario());
             else
@@ -26,27 +28,18 @@ namespace PizzaNicola_AspNetCore.Controllers
         }
 
         [HttpPost]
-        public IActionResult Index(Usuario usuario)
+        public async Task<IActionResult> Index(Usuario usuario)
         {
-            if(string.IsNullOrEmpty(usuario.login) || string.IsNullOrEmpty(usuario.password))
+            try
             {
-                ModelState.AddModelError("", "Por favor, ingrese los datos solicitados.");
+                bool mensaje = await _usuarioR.SeguridadUsuario(usuario);
+                ViewBag.mensaje = mensaje;
             }
-            else
+            catch (Exception ex)
             {
-                bool existeUsuario = iUsuario.SeguridadUsuario(usuario);
-                if (existeUsuario)
-                {
-                    HttpContext.Session.SetString(SessionLogin, usuario.login);
-                    return RedirectToAction("Index", "Home");
-                }
-                else
-                {
-                    ModelState.AddModelError("", "Los datos ingresados son incorrectos o inválidos.");
-                }
+                ViewBag.mensaje = $"Error al insertar el extra en MongoDB: {ex.Message}";
             }
-
-            return View(usuario);
+            return RedirectToAction("Index","Home") ;
         }
 
         public IActionResult CerrarSesion()

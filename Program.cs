@@ -9,6 +9,7 @@ builder.Services.AddSession();
 builder.Services.AddSingleton<IUsuario, UsuarioRepositorio>();
 builder.Services.AddScoped<ExtraRepositorio, ExtraRepositorio>();
 builder.Services.AddScoped<PizzaRepositorio, PizzaRepositorio>();
+builder.Services.AddScoped<UsuarioRepositorio, UsuarioRepositorio>();
 
 var app = builder.Build();
 

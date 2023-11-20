@@ -1,33 +1,34 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using MongoDB.Bson.Serialization.Attributes;
+using MongoDB.Bson;
+using System.ComponentModel.DataAnnotations;
 
 namespace PizzaNicola_AspNetCore.Models.Entidades
 {
     public class Usuario
     {
-        [Display(Name = "ID del Usuario")]
-        public int idUsuario { get; set; }
+        [Display(Name = "ID")]
+        [BsonId]
+        [BsonRepresentation(BsonType.ObjectId)]
+        public string id { get; set; }
+
         [Required]
         [Display(Name = "Nombres")]
-        public string? nombres { get; set;}
+        public string nombre { get; set;}
+
         [Required]
         [Display(Name = "Apellidos")]
-        public string? apellidos { get; set; }
-        [Required]
-        [Display(Name = "Fecha de Nacimiento")]
-        public DateTime fechaNacimiento { get; set; }
+        public string apellidos { get; set; }
+
         [Required]
         [Display(Name = "DNI")]
-        public string? dni { get; set; }
-        [Required]
-        [Display(Name = "Región")]
-        public int idRegion { get; set; }
-        [Display(Name = "Región")]
-        public string? nombreRegion { get; set; }
+        public string dni { get; set; }
+
         [Required]
         [Display(Name = "Login")]
-        public string? login { get; set; }
+        public string login { get; set; }
+
         [Required]
         [Display(Name = "Password")]
-        public string? password { get; set; }
+        public string password { get; set; }
     }
 }

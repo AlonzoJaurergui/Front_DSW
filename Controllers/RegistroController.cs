@@ -10,8 +10,13 @@ namespace PizzaNicola_AspNetCore.Controllers
 {
     public class RegistroController : Controller
     {
+        private readonly UsuarioRepositorio _usuRepo;
+        public RegistroController( UsuarioRepositorio usuarioRepositorio) 
+        {
+            _usuRepo = usuarioRepositorio;
+        }
 
-        public IActionResult Index()
+        public async Task<IActionResult>  Index()
         {
             return View();
         }
@@ -25,29 +30,29 @@ namespace PizzaNicola_AspNetCore.Controllers
         [HttpPost]
         public async Task<IActionResult> RegisterUsuario(Usuario usuario)
         {
-            string mensaje = "";
-
-            if(!ModelState.IsValid)
+            try
             {
-               
-                return View(usuario);
+                using (var httpclient = new HttpClient())
+                {
+                    httpclient.BaseAddress = new Uri("http://localhost:8080");
+                    HttpResponseMessage response = await httpclient.PostAsJsonAsync("api/nicola/usuarios/usuario",usuario);
+                    if (response.IsSuccessStatusCode)
+                    {
+                        string mensaje = await _usuRepo.Registrar(usuario);
+                        ViewBag.mensaje = mensaje;
+                    }
+                    else
+                    {
+                        return View("Error prro lo siento");
+                    }
+                }
+                
             }
-
-            using (var httpclient = new HttpClient())
+            catch (Exception ex)
             {
-                httpclient.BaseAddress = new Uri("https://localhost:7061/api/Usuario/");
-                StringContent content = new StringContent(JsonConvert.SerializeObject(usuario),
-                                        Encoding.UTF8, "application/json");
-
-                HttpResponseMessage response = await httpclient.PostAsync("AddUsuario", content);
-                string apiResponse = await response.Content.ReadAsStringAsync();
-                mensaje = apiResponse.Trim();
-            }
-
-            ViewBag.mensaje = mensaje;
-
-            
-            return View(usuario);
+                ViewBag.mensaje = $"Error al insertar la pizza en MongoDB: {ex.Message}";
+            }            
+            return View("RegisterUsuario",usuario);
         }
     }
 }

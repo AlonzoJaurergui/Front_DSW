@@ -4,7 +4,7 @@ namespace PizzaNicola_AspNetCore.Models.Interfaces
 {
     public interface IUsuario
     {
-        bool SeguridadUsuario(Usuario usuario);
-        string Registrar(Usuario usuario);
+       Task<bool> SeguridadUsuario(Usuario usuario);
+        Task<string> Registrar(Usuario usuario);
     }
 }
