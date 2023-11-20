@@ -129,5 +129,35 @@ namespace PizzaNicola_AspNetCore.Controllers
             return RedirectToAction("Index");
         }
 
+        public async Task<IActionResult> BuscarPizzas(string nombre)
+        {
+            List<Pizza> pizzas = new List<Pizza>();
+
+            try
+            {
+                using (var httpclient = new HttpClient())
+                {
+                    httpclient.BaseAddress = new Uri("http://localhost:8080");
+                    HttpResponseMessage response = await httpclient.GetAsync($"api/nicola/pizzas/pizza/{nombre}");
+
+                    if (response.IsSuccessStatusCode)
+                    {
+                        string apiResponse = await response.Content.ReadAsStringAsync();
+                        pizzas = JsonConvert.DeserializeObject<List<Pizza>>(apiResponse);
+                    }
+                    else
+                    {
+                        return View("ERROR! T-T");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
+            return View("Index", pizzas);
+        }
+
     }
 }

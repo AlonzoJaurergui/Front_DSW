@@ -117,5 +117,34 @@ namespace PizzaNicola_AspNetCore.Controllers
             }
             return RedirectToAction("Index");
         }
+        public async Task<IActionResult> BuscarExtras(string descripcion)
+        {
+            List<Extra> extras = new List<Extra>();
+
+            try
+            {
+                using (var httpclient = new HttpClient())
+                {
+                    httpclient.BaseAddress = new Uri("http://localhost:8080");
+                    HttpResponseMessage response = await httpclient.GetAsync($"api/nicola/extras/extra/{descripcion}");
+
+                    if (response.IsSuccessStatusCode)
+                    {
+                        string apiResponse = await response.Content.ReadAsStringAsync();
+                        extras = JsonConvert.DeserializeObject<List<Extra>>(apiResponse);
+                    }
+                    else
+                    {
+                        return View("ERROR! T-T");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
+            return View("Index", extras);
+        }
     }
 }

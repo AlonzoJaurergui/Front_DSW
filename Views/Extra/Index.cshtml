@@ -3,12 +3,35 @@
 @{
     ViewData["Title"] = "Index";
 }
+<style>
+    .search-container {
+        display: flex;
+        justify-content: space-between;
+    }
+</style>
 
 <h1>Extras</h1>
+<br />
 
-<p>
-    <a asp-action="InsertExtra" class="btn btn-primary">Agregar Extra +</a>
-</p>
+<div class="search-container">
+    <div class="table-container">
+        <p>
+            <a asp-action="InsertExtra" class="btn btn-primary">Agregar Extra</a>
+        </p>
+    </div>
+    <div class="search-form-container">
+        <form asp-action="BuscarExtras" method="get" class="search-form">
+            <div class="form-group">
+                <label for="descripcion">Buscar:</label>
+                <input type="text" class="form-control" name="descripcion" id="descripcion" />
+            </div>
+            <div>
+                <button type="submit" class="btn btn-primary">Buscar</button>
+            </div>
+
+        </form> <br />
+    </div>
+</div>
 <table class="table">
     <thead>
         <tr>
