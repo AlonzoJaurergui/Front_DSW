@@ -10931,24 +10931,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\alnzj\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Usuario\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\WS-Spring\\Proyecto DSW\\ADRY 14-11\\PizzaNicola_Frontend_AspNetCore\\PizzaNicola_Frontend_AspNetCore\\PizzaNicola_AspNetCore.csproj",
+      "projectUniqueName": "C:\\Users\\Usuario\\Documents\\CIBERTEC\\Ciclo Regular VI\\DSWII\\_DSWII Proyecto T3\\Front_DSW\\PizzaNicola_AspNetCore.csproj",
       "projectName": "PizzaNicola_AspNetCore",
-      "projectPath": "E:\\WS-Spring\\Proyecto DSW\\ADRY 14-11\\PizzaNicola_Frontend_AspNetCore\\PizzaNicola_Frontend_AspNetCore\\PizzaNicola_AspNetCore.csproj",
-      "packagesPath": "C:\\Users\\alnzj\\.nuget\\packages\\",
-      "outputPath": "E:\\WS-Spring\\Proyecto DSW\\ADRY 14-11\\PizzaNicola_Frontend_AspNetCore\\PizzaNicola_Frontend_AspNetCore\\obj\\",
+      "projectPath": "C:\\Users\\Usuario\\Documents\\CIBERTEC\\Ciclo Regular VI\\DSWII\\_DSWII Proyecto T3\\Front_DSW\\PizzaNicola_AspNetCore.csproj",
+      "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Usuario\\Documents\\CIBERTEC\\Ciclo Regular VI\\DSWII\\_DSWII Proyecto T3\\Front_DSW\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\alnzj\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -11014,7 +11009,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
       }
     }
   }

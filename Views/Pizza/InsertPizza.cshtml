@@ -25,12 +25,23 @@
             </div>
             <div class="form-group">
                 <label asp-for="tamanio" class="control-label"></label>
-                <input asp-for="tamanio" class="form-control" />
+                <select asp-for="tamanio" class="form-control" >
+                    <option value="Mediana">Mediana</option>
+                    <option value="Grande">Grande</option>
+                    <option value="Familiar">Familiar</option>
+                    <option value="Super Familiar">Super Familiar</option>
+                </select>
                 <span asp-validation-for="tamanio" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="tipoMasa" class="control-label"></label>
-                <input asp-for="tipoMasa" class="form-control" />
+                <select asp-for="tipoMasa" class="form-control" >
+                    <option value="Masa Regular">Masa Regular</option>
+                    <option value="Masa Delgada">Masa Delgada</option>
+                    <option value="Masa con Borde de Queso">Masa con Borde de Queso</option>
+                    <option value="Masa con Borde Parmesano">Masa con Borde Parmesano</option>
+                    <option value="Masa Delgada con Base Parmesano">Masa Delgada con Base Parmesano</option>
+                </select>
                 <span asp-validation-for="tipoMasa" class="text-danger"></span>
             </div>
             
