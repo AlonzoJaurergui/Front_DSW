@@ -12,11 +12,11 @@
     @foreach (var item in Model)
     {
         <div class="registro">
-            <img class="insumo-img" src="@Url.Content(string.Format("~/imagenes/insumos/{0}.jpg", item.idInsumo))" />
+            <img class="insumo-img" src="@Url.Content(string.Format("~/imagenes/insumos/{0}.jpg", item.nombreInsumo))" />
             <br />
-            <em>Código:</em> @Html.DisplayFor(insumo => item.idInsumo)
+            <em>Código:</em> @Html.DisplayFor(insumo => item.id)
             <br />
-            <em>Tipo:</em> @Html.DisplayFor(insumo => item.nombreInsumo)
+            <em>Nombre:</em> @Html.DisplayFor(insumo => item.nombreInsumo)
             <br />
             <em>Marca:</em> @Html.DisplayFor(insumo => item.descripcion)
             <br />
@@ -25,7 +25,7 @@
             <em>Stock:</em> @Html.DisplayFor(insumo => item.stock)
             <br />
 
-            @Html.ActionLink("Agregar", "Agregar", new {idInsumo = item.idInsumo})
+            @Html.ActionLink("Agregar", "Agregar", new {idInsumo = item.id})
         </div>
     }
 </div>

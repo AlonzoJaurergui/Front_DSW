@@ -13,7 +13,7 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.idInsumo)
+                @Html.DisplayNameFor(model => model.id)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.nombreInsumo)
@@ -37,7 +37,7 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.idInsumo)
+                @Html.DisplayFor(modelItem => item.id)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.nombreInsumo)
@@ -55,7 +55,7 @@
                 @Html.DisplayFor(modelItem => item.monto)
             </td>
             <td>
-                @Html.ActionLink("Eliminar", "Delete", new { idInsumo=item.idInsumo })
+                @Html.ActionLink("Eliminar", "Delete", new { idInsumo=item.id })
             </td>
         </tr>
 }

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "55hF0SDBw0YpPWSxV1aPw1JS/mz0+0BX5gR9EKinoqA=",
+  "Hash": "vUkVkUj6AIm8gu6sPjZS4yHM3OTzyOxZyx+uAXywX+g=",
   "Source": "PizzaNicola_AspNetCore",
   "BasePath": "_content/PizzaNicola_AspNetCore",
   "Mode": "Default",
@@ -102,12 +102,12 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "E:\\WS-Spring\\Proyecto DSW\\ADRY 14-11\\PizzaNicola_Frontend_AspNetCore\\PizzaNicola_Frontend_AspNetCore\\wwwroot\\imagenes\\insumos\\1.jpg",
+      "Identity": "E:\\WS-Spring\\Proyecto DSW\\ADRY 14-11\\PizzaNicola_Frontend_AspNetCore\\PizzaNicola_Frontend_AspNetCore\\wwwroot\\imagenes\\insumos\\carne.jpg",
       "SourceId": "PizzaNicola_AspNetCore",
       "SourceType": "Discovered",
       "ContentRoot": "E:\\WS-Spring\\Proyecto DSW\\ADRY 14-11\\PizzaNicola_Frontend_AspNetCore\\PizzaNicola_Frontend_AspNetCore\\wwwroot\\",
       "BasePath": "_content/PizzaNicola_AspNetCore",
-      "RelativePath": "imagenes/insumos/1.jpg",
+      "RelativePath": "imagenes/insumos/carne.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -116,15 +116,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\imagenes\\insumos\\1.jpg"
+      "OriginalItemSpec": "wwwroot\\imagenes\\insumos\\carne.jpg"
     },
     {
-      "Identity": "E:\\WS-Spring\\Proyecto DSW\\ADRY 14-11\\PizzaNicola_Frontend_AspNetCore\\PizzaNicola_Frontend_AspNetCore\\wwwroot\\imagenes\\insumos\\2.jpg",
+      "Identity": "E:\\WS-Spring\\Proyecto DSW\\ADRY 14-11\\PizzaNicola_Frontend_AspNetCore\\PizzaNicola_Frontend_AspNetCore\\wwwroot\\imagenes\\insumos\\cebolla.jpg",
       "SourceId": "PizzaNicola_AspNetCore",
       "SourceType": "Discovered",
       "ContentRoot": "E:\\WS-Spring\\Proyecto DSW\\ADRY 14-11\\PizzaNicola_Frontend_AspNetCore\\PizzaNicola_Frontend_AspNetCore\\wwwroot\\",
       "BasePath": "_content/PizzaNicola_AspNetCore",
-      "RelativePath": "imagenes/insumos/2.jpg",
+      "RelativePath": "imagenes/insumos/cebolla.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -133,15 +133,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\imagenes\\insumos\\2.jpg"
+      "OriginalItemSpec": "wwwroot\\imagenes\\insumos\\cebolla.jpg"
     },
     {
-      "Identity": "E:\\WS-Spring\\Proyecto DSW\\ADRY 14-11\\PizzaNicola_Frontend_AspNetCore\\PizzaNicola_Frontend_AspNetCore\\wwwroot\\imagenes\\insumos\\3.jpg",
+      "Identity": "E:\\WS-Spring\\Proyecto DSW\\ADRY 14-11\\PizzaNicola_Frontend_AspNetCore\\PizzaNicola_Frontend_AspNetCore\\wwwroot\\imagenes\\insumos\\harina.jpg",
       "SourceId": "PizzaNicola_AspNetCore",
       "SourceType": "Discovered",
       "ContentRoot": "E:\\WS-Spring\\Proyecto DSW\\ADRY 14-11\\PizzaNicola_Frontend_AspNetCore\\PizzaNicola_Frontend_AspNetCore\\wwwroot\\",
       "BasePath": "_content/PizzaNicola_AspNetCore",
-      "RelativePath": "imagenes/insumos/3.jpg",
+      "RelativePath": "imagenes/insumos/harina.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -150,15 +150,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\imagenes\\insumos\\3.jpg"
+      "OriginalItemSpec": "wwwroot\\imagenes\\insumos\\harina.jpg"
     },
     {
-      "Identity": "E:\\WS-Spring\\Proyecto DSW\\ADRY 14-11\\PizzaNicola_Frontend_AspNetCore\\PizzaNicola_Frontend_AspNetCore\\wwwroot\\imagenes\\insumos\\4.jpg",
+      "Identity": "E:\\WS-Spring\\Proyecto DSW\\ADRY 14-11\\PizzaNicola_Frontend_AspNetCore\\PizzaNicola_Frontend_AspNetCore\\wwwroot\\imagenes\\insumos\\mortadela.jpg",
       "SourceId": "PizzaNicola_AspNetCore",
       "SourceType": "Discovered",
       "ContentRoot": "E:\\WS-Spring\\Proyecto DSW\\ADRY 14-11\\PizzaNicola_Frontend_AspNetCore\\PizzaNicola_Frontend_AspNetCore\\wwwroot\\",
       "BasePath": "_content/PizzaNicola_AspNetCore",
-      "RelativePath": "imagenes/insumos/4.jpg",
+      "RelativePath": "imagenes/insumos/mortadela.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -167,15 +167,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\imagenes\\insumos\\4.jpg"
+      "OriginalItemSpec": "wwwroot\\imagenes\\insumos\\mortadela.jpg"
     },
     {
-      "Identity": "E:\\WS-Spring\\Proyecto DSW\\ADRY 14-11\\PizzaNicola_Frontend_AspNetCore\\PizzaNicola_Frontend_AspNetCore\\wwwroot\\imagenes\\insumos\\5.jpg",
+      "Identity": "E:\\WS-Spring\\Proyecto DSW\\ADRY 14-11\\PizzaNicola_Frontend_AspNetCore\\PizzaNicola_Frontend_AspNetCore\\wwwroot\\imagenes\\insumos\\queso.jpg",
       "SourceId": "PizzaNicola_AspNetCore",
       "SourceType": "Discovered",
       "ContentRoot": "E:\\WS-Spring\\Proyecto DSW\\ADRY 14-11\\PizzaNicola_Frontend_AspNetCore\\PizzaNicola_Frontend_AspNetCore\\wwwroot\\",
       "BasePath": "_content/PizzaNicola_AspNetCore",
-      "RelativePath": "imagenes/insumos/5.jpg",
+      "RelativePath": "imagenes/insumos/queso.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -184,15 +184,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\imagenes\\insumos\\5.jpg"
+      "OriginalItemSpec": "wwwroot\\imagenes\\insumos\\queso.jpg"
     },
     {
-      "Identity": "E:\\WS-Spring\\Proyecto DSW\\ADRY 14-11\\PizzaNicola_Frontend_AspNetCore\\PizzaNicola_Frontend_AspNetCore\\wwwroot\\imagenes\\insumos\\6.jpg",
+      "Identity": "E:\\WS-Spring\\Proyecto DSW\\ADRY 14-11\\PizzaNicola_Frontend_AspNetCore\\PizzaNicola_Frontend_AspNetCore\\wwwroot\\imagenes\\insumos\\tomate.jpg",
       "SourceId": "PizzaNicola_AspNetCore",
       "SourceType": "Discovered",
       "ContentRoot": "E:\\WS-Spring\\Proyecto DSW\\ADRY 14-11\\PizzaNicola_Frontend_AspNetCore\\PizzaNicola_Frontend_AspNetCore\\wwwroot\\",
       "BasePath": "_content/PizzaNicola_AspNetCore",
-      "RelativePath": "imagenes/insumos/6.jpg",
+      "RelativePath": "imagenes/insumos/tomate.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -201,7 +201,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\imagenes\\insumos\\6.jpg"
+      "OriginalItemSpec": "wwwroot\\imagenes\\insumos\\tomate.jpg"
     },
     {
       "Identity": "E:\\WS-Spring\\Proyecto DSW\\ADRY 14-11\\PizzaNicola_Frontend_AspNetCore\\PizzaNicola_Frontend_AspNetCore\\wwwroot\\imagenes\\logo_pizza_nicola.jpg",

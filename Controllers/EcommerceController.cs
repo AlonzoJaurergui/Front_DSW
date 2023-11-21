@@ -1,7 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.Data.SqlClient;
+//using Microsoft.Data.SqlClient;
 using Newtonsoft.Json;
 using PizzaNicola_AspNetCore.Models.Entidades;
+using PizzaNicola_AspNetCore.Models.Interfaces;
 using System.Data;
 using System.Drawing;
 
@@ -23,34 +24,43 @@ namespace PizzaNicola_AspNetCore.Controllers
         {
             List<Insumo> insumos = new List<Insumo>();
 
-            using (SqlConnection connection = new SqlConnection(cadena))
+            try
             {
-                SqlCommand cmd = new SqlCommand("sp_GetInsumos", connection);
-                cmd.CommandType = CommandType.StoredProcedure;
-
-                connection.Open();
-
-                SqlDataReader dr = cmd.ExecuteReader();
-                while (dr.Read())
+                using (var httpclient = new HttpClient())
                 {
-                    insumos.Add(new Insumo
+                    httpclient.BaseAddress = new Uri("http://localhost:8080");
+                    HttpResponseMessage response = httpclient.GetAsync("api/nicola/insumos/").Result;
+
+                    if (response.IsSuccessStatusCode)
                     {
-                        idInsumo = dr.GetInt32(0),
-                        nombreInsumo = dr.GetString(1),
-                        descripcion = dr.GetString(2),
-                        precio = dr.GetDecimal(3),
-                        stock = dr.GetInt32(4)
-                    });
+                        string apiResponse = response.Content.ReadAsStringAsync().Result;
+                        insumos = JsonConvert.DeserializeObject<List<Insumo>>(apiResponse)
+                        .Select(item => new Insumo()
+                        {
+                            id = item.id,
+                            nombreInsumo = item.nombreInsumo,
+                            descripcion = item.descripcion,                            
+                            precio = item.precio,
+                            stock = item.stock
+                        }).ToList();
+                    }
+                    else
+                    {
+                        return null;
+                    }
                 }
             }
-
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
             return insumos;
         }
 
-        Insumo Buscar(int idInsumo = 0)
+        Insumo Buscar(string id = "")
         {
             Insumo insumo = GetInsumos()
-                            .Where(item => item.idInsumo == idInsumo)
+                            .Where(item => item.id == id)
                             .FirstOrDefault();
             if (insumo == null)
                 insumo = new Insumo();
@@ -63,15 +73,15 @@ namespace PizzaNicola_AspNetCore.Controllers
             return View(await Task.Run(() => GetInsumos()));
         }
 
-        public async Task<IActionResult> Agregar(int idInsumo)
+        public async Task<IActionResult> Agregar(string id)
         {
-            return View(await Task.Run(() => Buscar(idInsumo)));
+            return View(await Task.Run(() => Buscar(id)));
         }
 
         [HttpPost]
-        public async Task<IActionResult> Agregar(int idInsumo, int cantidad)
+        public async Task<IActionResult> Agregar(string id, int cantidad)
         {
-            Insumo insumo = Buscar(idInsumo);
+            Insumo insumo = Buscar(id);
 
             if (cantidad > insumo.stock)
             {
@@ -86,12 +96,12 @@ namespace PizzaNicola_AspNetCore.Controllers
                 canasta = JsonConvert.DeserializeObject<List<ItemInsumo>>(HttpContext.Session.GetString(_CANASTA));
             }
 
-            ItemInsumo? itemAux = canasta.Where(item => item.idInsumo == idInsumo).FirstOrDefault();
+            ItemInsumo? itemAux = canasta.Where(item => item.id == id).FirstOrDefault();
 
             if (itemAux == null)
             {
                 ItemInsumo item = new ItemInsumo();
-                item.idInsumo = insumo.idInsumo;
+                item.id = insumo.id;
                 item.nombreInsumo = insumo.nombreInsumo;
                 item.descripcion = insumo.descripcion;
                 item.precio = insumo.precio;
@@ -117,11 +127,11 @@ namespace PizzaNicola_AspNetCore.Controllers
             return View(canasta);
         }
 
-        public IActionResult Delete(int idInsumo)
+        public IActionResult Delete(string idInsumo)
         {
             List<ItemInsumo> canasta = JsonConvert.DeserializeObject<List<ItemInsumo>>(HttpContext.Session.GetString(_CANASTA));
 
-            ItemInsumo item = canasta.Where(item => item.idInsumo == idInsumo).FirstOrDefault();
+            ItemInsumo item = canasta.Where(item => item.id == idInsumo).FirstOrDefault();
             canasta.Remove(item);
 
             if(canasta.Count == 0)

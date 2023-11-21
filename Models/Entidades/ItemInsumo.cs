@@ -1,11 +1,16 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using MongoDB.Bson.Serialization.Attributes;
+using MongoDB.Bson;
+using System.ComponentModel.DataAnnotations;
 
 namespace PizzaNicola_AspNetCore.Models.Entidades
 {
     public class ItemInsumo
     {
-        [Display(Name = "Código")]
-        public int idInsumo { get; set; }
+     
+        [Display(Name = "ID")]
+        [BsonId]
+        [BsonRepresentation(BsonType.ObjectId)]
+        public string id { get; set; }
         [Display(Name = "Nombre")]
         public string? nombreInsumo { get; set; }
         [Display(Name = "Descripción")]
