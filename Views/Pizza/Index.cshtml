@@ -27,7 +27,7 @@
         <form asp-action="BuscarPizzas" method="get" class="search-form">
             <div class="form-group">
                 <label for="nombre">Buscar:</label>
-                <input type="text" class="form-control" name="nombre" id="nombre" />
+                <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombre" />
             </div>
             <div>
                 <button type="submit" class="btn btn-primary">Buscar</button>
@@ -41,9 +41,9 @@
 <table class="table">
     <thead>
         <tr>
-            <th>
+            @*<th>
                 @Html.DisplayNameFor(model => model.id)
-            </th>
+            </th>*@
             <th>
                 @Html.DisplayNameFor(model => model.nombrePizza)
             </th>
@@ -62,15 +62,15 @@
             <th>
                 @Html.DisplayNameFor(model => model.stock)
             </th>
-            <th></th>
+            <th>Acciones</th>
         </tr>
     </thead>
     <tbody>
 @foreach (var item in Model) {
         <tr>
-            <td>
+            @*<td>
                 @Html.DisplayFor(modelItem => item.id)
-            </td>
+            </td>*@
             <td>
                 @Html.DisplayFor(modelItem => item.nombrePizza)
             </td>

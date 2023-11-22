@@ -131,6 +131,11 @@ namespace PizzaNicola_AspNetCore.Controllers
 
         public async Task<IActionResult> BuscarPizzas(string nombre)
         {
+            if (nombre == null)
+            {
+                return RedirectToAction("Index");
+            }
+
             List<Pizza> pizzas = new List<Pizza>();
 
             try
