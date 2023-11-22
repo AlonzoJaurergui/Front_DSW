@@ -16,6 +16,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Usuario\Documents\CIBERTEC\Ciclo Regular VI\DSWII\_DSWII Proyecto T3\Front_DSW
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/Usuario/Documents/CIBERTEC/Ciclo Regular VI/DSWII/_DSWII Proyecto T3/Front_DSW/Views/Cliente/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Usuario/Documents/CIBERTEC/Ciclo Regular VI/DSWII/_DSWII Proyecto T3/Front_DSW/Views/Ecommerce/Agregar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRWNvbW1lcmNlXEFncmVnYXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
