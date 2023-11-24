@@ -6,17 +6,17 @@
 
 <h1>Canasta</h1>
 
-<p>
-    <a class="btn btn-primary" asp-action="Index" asp-controller="Ecommerce">Volver al Portal</a>
-</p>
+<div style="display:flex; justify-content: space-between">
+    <p>
+        <a class="btn btn-primary" asp-action="Index" asp-controller="Ecommerce">Volver al Portal</a>
+    </p>
+</div>
+
 <table class="table">
     <thead>
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.id)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.nombreInsumo)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.descripcion)
@@ -41,9 +41,6 @@
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.id)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.nombreInsumo)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.descripcion)
