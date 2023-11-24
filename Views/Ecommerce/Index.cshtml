@@ -27,7 +27,7 @@
             <em>Stock:</em> @Html.DisplayFor(insumo => item.stock)
             <br />
 
-            @Html.ActionLink("Agregar", "Agregar", new {id = item.id})
+            @Html.ActionLink("Agregar", "Agregar", new {id = item.id}, new {@class = "btn btn-primary"} )
         </div>
     }
 </div>

@@ -7,7 +7,7 @@
 <h1>Canasta</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a class="btn btn-primary" asp-action="Index" asp-controller="Ecommerce">Volver al Portal</a>
 </p>
 <table class="table">
     <thead>
@@ -61,7 +61,7 @@
                 @Html.DisplayFor(modelItem => item.monto)
             </td>
             <td>
-                @Html.ActionLink("Eliminar", "Delete", new { id=item.id })
+                @Html.ActionLink("Eliminar", "Delete", new { id=item.id }, new {@class = "btn btn-danger"} )
             </td>
         </tr>
 }
