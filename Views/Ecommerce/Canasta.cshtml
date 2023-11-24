@@ -22,6 +22,9 @@
                 @Html.DisplayNameFor(model => model.descripcion)
             </th>
             <th>
+                @Html.DisplayNameFor(model => model.proveedor)
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.precio)
             </th>
             <th>
@@ -46,6 +49,9 @@
                 @Html.DisplayFor(modelItem => item.descripcion)
             </td>
             <td>
+                @Html.DisplayFor(modelItem => item.proveedor)
+            </td>
+            <td>
                 @Html.DisplayFor(modelItem => item.precio)
             </td>
             <td>
@@ -55,7 +61,7 @@
                 @Html.DisplayFor(modelItem => item.monto)
             </td>
             <td>
-                @Html.ActionLink("Eliminar", "Delete", new { idInsumo=item.id })
+                @Html.ActionLink("Eliminar", "Delete", new { id=item.id })
             </td>
         </tr>
 }

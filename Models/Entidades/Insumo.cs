@@ -13,6 +13,8 @@ namespace PizzaNicola_AspNetCore.Models.Entidades
         public string nombreInsumo { get; set; }
         [Display(Name = "Descripción")]
         public string descripcion { get; set; }
+        [Display(Name = "Proveedor")]
+        public string proveedor { get; set; }
         [Display(Name = "Precio")]
         public decimal precio { get; set; }
         [Display(Name = "Stock")]
