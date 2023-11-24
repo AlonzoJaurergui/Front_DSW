@@ -1,0 +1,77 @@
+﻿@model IEnumerable<PizzaNicola_AspNetCore.Models.Entidades.Cliente>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Clientes registrados</h1>
+<br />
+
+<div style="display:flex; justify-content: space-between">
+    <p>
+        <a class="btn btn-primary" asp-action="InsertCliente">Añadir nuevo Cliente</a>
+    </p>
+    <p>
+        <a class="btn btn-info" asp-action="SearchCliente">Buscar un Cliente por DNI</a>
+    </p>
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.dni)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.apellidos)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.edad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.telefono)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.direccion)
+            </th>
+            @*<th>Acciones</th>*@
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.dni)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.apellidos)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.edad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.telefono)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.direccion)
+            </td>
+            @*<td>
+                <a class="btn btn-warning" asp-action="UpdateCliente" asp-route-id="@item.id">Actualizar</a>
+                <a href="#" class="btn btn-danger" onclick="confirmarEliminacion('@item.id')">Eliminar</a>
+            </td>*@
+        </tr>
+}
+    </tbody>
+</table>
+@*<script>
+    function confirmarEliminacion(id) {
+        if (confirm("¿Seguro que deseas eliminar?")) {
+            window.location.href = '/Cliente/DeleteCliente?id=' + id;
+        }
+    }
+</script>*@

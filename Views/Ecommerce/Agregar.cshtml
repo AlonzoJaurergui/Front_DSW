@@ -8,11 +8,14 @@
         <dt class="col-sm-2">@Html.DisplayNameFor(model => model.id)</dt>
         <dd class="col-sm-10">@Html.DisplayFor(model => model.id)</dd>
 
-        <dt class="col-sm-2">@Html.DisplayNameFor(model => model.nombreInsumo)</dt>
-        <dd class="col-sm-10">@Html.DisplayFor(model => model.nombreInsumo)</dd>
+        @*<dt class="col-sm-2">@Html.DisplayNameFor(model => model.nombreInsumo)</dt>
+        <dd class="col-sm-10">@Html.DisplayFor(model => model.nombreInsumo)</dd>*@
 
         <dt class="col-sm-2">@Html.DisplayNameFor(model => model.descripcion)</dt>
         <dd class="col-sm-10">@Html.DisplayFor(model => model.descripcion)</dd>
+
+        <dt class="col-sm-2">@Html.DisplayNameFor(model => model.proveedor)</dt>
+        <dd class="col-sm-10">@Html.DisplayFor(model => model.proveedor)</dd>
 
         <dt class="col-sm-2">@Html.DisplayNameFor(model => model.precio)</dt>
         <dd class="col-sm-10">@Html.DisplayFor(model => model.precio)</dd>
@@ -29,7 +32,7 @@
         <em>Ingresar la cantidad:</em>
         @Html.TextBox("cantidad", 1)
 
-        <input type="submit" value="Agregar" class="btn btn-primary" />
+        <input type="submit" value="Agregar" class="btn btn-success" />
         <a asp-action="Canasta" asp-controller="Ecommerce" class="btn btn-primary">Ir a la canasta</a>
     }
 </div>

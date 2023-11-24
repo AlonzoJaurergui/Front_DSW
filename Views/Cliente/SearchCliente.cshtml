@@ -1,0 +1,84 @@
+﻿@model PizzaNicola_AspNetCore.Models.Entidades.Cliente
+
+@{
+    ViewData["Title"] = "SearchCliente";
+}
+<style>
+    .search-container {
+        display: flex;
+        justify-content: space-between;
+    }
+</style>
+
+<h1>Buscar Cliente</h1>
+
+<div class="search-container">
+    <div class="search-form-container">
+        <form asp-action="SearchCliente" method="get" class="search-form">
+            <div class="form-group">
+                <label for="dni">Buscar:</label>
+                <input type="text" class="form-control" name="dni" id="dni" placeholder="DNI" />
+            </div>
+            <div>
+                <button type="submit" class="btn btn-primary">Buscar</button>
+            </div>
+
+        </form> <br />
+    </div>
+</div>
+<div>
+    @ViewBag.mensaje
+</div>
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.dni)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.dni)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.nombre)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.nombre)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.apellidos)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.apellidos)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.edad)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.edad)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.telefono)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.telefono)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.direccion)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.direccion)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a class="btn btn-warning" asp-action="UpdateCliente" asp-route-id="@Model.id">Actualizar</a>
+    <a href="#" class="btn btn-danger" onclick="confirmarEliminacion('@Model.id')">Eliminar</a>
+    <a class="btn btn-primary" asp-action="Index">Volver a la lista</a>
+</div>
+<script>
+    function confirmarEliminacion(id) {
+        if (confirm("¿Seguro que deseas eliminar?")) {
+            window.location.href = '/Cliente/DeleteCliente?id=' + id;
+        }
+    }
+</script>

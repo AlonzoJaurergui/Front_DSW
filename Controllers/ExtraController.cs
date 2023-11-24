@@ -119,6 +119,11 @@ namespace PizzaNicola_AspNetCore.Controllers
         }
         public async Task<IActionResult> BuscarExtras(string descripcion)
         {
+            if (descripcion == null)
+            {
+                return RedirectToAction("Index");
+            }
+
             List<Extra> extras = new List<Extra>();
 
             try

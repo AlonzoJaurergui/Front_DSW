@@ -13,19 +13,21 @@
     {
         <div class="registro">
             <img class="insumo-img" src="@Url.Content(string.Format("~/imagenes/insumos/{0}.jpg", item.nombreInsumo))" />
+            @*<br />
+            <em>Código:</em> @Html.DisplayFor(insumo => item.id)*@
+            @*<br />
+            <em>Nombre:</em> @Html.DisplayFor(insumo => item.nombreInsumo)*@
             <br />
-            <em>Código:</em> @Html.DisplayFor(insumo => item.id)
+            <em>Descripcion:</em> @Html.DisplayFor(insumo => item.descripcion)
             <br />
-            <em>Nombre:</em> @Html.DisplayFor(insumo => item.nombreInsumo)
-            <br />
-            <em>Marca:</em> @Html.DisplayFor(insumo => item.descripcion)
+            <em>Proveedor:</em> @Html.DisplayFor(insumo => item.proveedor)
             <br />
             <em>Precio:</em> @Html.DisplayFor(insumo => item.precio)
             <br />
             <em>Stock:</em> @Html.DisplayFor(insumo => item.stock)
             <br />
 
-            @Html.ActionLink("Agregar", "Agregar", new {idInsumo = item.id})
+            @Html.ActionLink("Agregar", "Agregar", new {id = item.id}, new {@class = "btn btn-primary"} )
         </div>
     }
 </div>

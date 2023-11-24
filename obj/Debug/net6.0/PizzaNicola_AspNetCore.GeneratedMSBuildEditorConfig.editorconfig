@@ -9,85 +9,101 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = PizzaNicola_AspNetCore
 build_property.RootNamespace = PizzaNicola_AspNetCore
-build_property.ProjectDir = E:\WS-Spring\Proyecto DSW\ADRY 14-11\PizzaNicola_Frontend_AspNetCore\PizzaNicola_Frontend_AspNetCore\
+build_property.ProjectDir = C:\Users\Usuario\Documents\CIBERTEC\Ciclo Regular VI\DSWII\_DSWII Proyecto T3\Front_DSW\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = E:\WS-Spring\Proyecto DSW\ADRY 14-11\PizzaNicola_Frontend_AspNetCore\PizzaNicola_Frontend_AspNetCore
+build_property.MSBuildProjectDirectory = C:\Users\Usuario\Documents\CIBERTEC\Ciclo Regular VI\DSWII\_DSWII Proyecto T3\Front_DSW
 build_property._RazorSourceGeneratorDebug = 
 
-[E:/WS-Spring/Proyecto DSW/ADRY 14-11/PizzaNicola_Frontend_AspNetCore/PizzaNicola_Frontend_AspNetCore/Views/Ecommerce/Agregar.cshtml]
+[C:/Users/Usuario/Documents/CIBERTEC/Ciclo Regular VI/DSWII/_DSWII Proyecto T3/Front_DSW/Views/Cliente/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/CIBERTEC/Ciclo Regular VI/DSWII/_DSWII Proyecto T3/Front_DSW/Views/Cliente/InsertCliente.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZVxJbnNlcnRDbGllbnRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/CIBERTEC/Ciclo Regular VI/DSWII/_DSWII Proyecto T3/Front_DSW/Views/Cliente/SearchCliente.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZVxTZWFyY2hDbGllbnRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/CIBERTEC/Ciclo Regular VI/DSWII/_DSWII Proyecto T3/Front_DSW/Views/Cliente/UpdateCliente.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZVxVcGRhdGVDbGllbnRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/CIBERTEC/Ciclo Regular VI/DSWII/_DSWII Proyecto T3/Front_DSW/Views/Ecommerce/Agregar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRWNvbW1lcmNlXEFncmVnYXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/WS-Spring/Proyecto DSW/ADRY 14-11/PizzaNicola_Frontend_AspNetCore/PizzaNicola_Frontend_AspNetCore/Views/Ecommerce/Canasta.cshtml]
+[C:/Users/Usuario/Documents/CIBERTEC/Ciclo Regular VI/DSWII/_DSWII Proyecto T3/Front_DSW/Views/Ecommerce/Canasta.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRWNvbW1lcmNlXENhbmFzdGEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/WS-Spring/Proyecto DSW/ADRY 14-11/PizzaNicola_Frontend_AspNetCore/PizzaNicola_Frontend_AspNetCore/Views/Ecommerce/Index.cshtml]
+[C:/Users/Usuario/Documents/CIBERTEC/Ciclo Regular VI/DSWII/_DSWII Proyecto T3/Front_DSW/Views/Ecommerce/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRWNvbW1lcmNlXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/WS-Spring/Proyecto DSW/ADRY 14-11/PizzaNicola_Frontend_AspNetCore/PizzaNicola_Frontend_AspNetCore/Views/Extra/Index.cshtml]
+[C:/Users/Usuario/Documents/CIBERTEC/Ciclo Regular VI/DSWII/_DSWII Proyecto T3/Front_DSW/Views/Extra/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXh0cmFcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/WS-Spring/Proyecto DSW/ADRY 14-11/PizzaNicola_Frontend_AspNetCore/PizzaNicola_Frontend_AspNetCore/Views/Extra/InsertExtra.cshtml]
+[C:/Users/Usuario/Documents/CIBERTEC/Ciclo Regular VI/DSWII/_DSWII Proyecto T3/Front_DSW/Views/Extra/InsertExtra.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXh0cmFcSW5zZXJ0RXh0cmEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/WS-Spring/Proyecto DSW/ADRY 14-11/PizzaNicola_Frontend_AspNetCore/PizzaNicola_Frontend_AspNetCore/Views/Extra/UpdateExtra.cshtml]
+[C:/Users/Usuario/Documents/CIBERTEC/Ciclo Regular VI/DSWII/_DSWII Proyecto T3/Front_DSW/Views/Extra/UpdateExtra.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXh0cmFcVXBkYXRlRXh0cmEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/WS-Spring/Proyecto DSW/ADRY 14-11/PizzaNicola_Frontend_AspNetCore/PizzaNicola_Frontend_AspNetCore/Views/Home/Index.cshtml]
+[C:/Users/Usuario/Documents/CIBERTEC/Ciclo Regular VI/DSWII/_DSWII Proyecto T3/Front_DSW/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/WS-Spring/Proyecto DSW/ADRY 14-11/PizzaNicola_Frontend_AspNetCore/PizzaNicola_Frontend_AspNetCore/Views/Home/Privacy.cshtml]
+[C:/Users/Usuario/Documents/CIBERTEC/Ciclo Regular VI/DSWII/_DSWII Proyecto T3/Front_DSW/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/WS-Spring/Proyecto DSW/ADRY 14-11/PizzaNicola_Frontend_AspNetCore/PizzaNicola_Frontend_AspNetCore/Views/Login/Index.cshtml]
+[C:/Users/Usuario/Documents/CIBERTEC/Ciclo Regular VI/DSWII/_DSWII Proyecto T3/Front_DSW/Views/Login/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/WS-Spring/Proyecto DSW/ADRY 14-11/PizzaNicola_Frontend_AspNetCore/PizzaNicola_Frontend_AspNetCore/Views/Pizza/Index.cshtml]
+[C:/Users/Usuario/Documents/CIBERTEC/Ciclo Regular VI/DSWII/_DSWII Proyecto T3/Front_DSW/Views/Pizza/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGl6emFcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/WS-Spring/Proyecto DSW/ADRY 14-11/PizzaNicola_Frontend_AspNetCore/PizzaNicola_Frontend_AspNetCore/Views/Pizza/InsertPizza.cshtml]
+[C:/Users/Usuario/Documents/CIBERTEC/Ciclo Regular VI/DSWII/_DSWII Proyecto T3/Front_DSW/Views/Pizza/InsertPizza.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGl6emFcSW5zZXJ0UGl6emEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/WS-Spring/Proyecto DSW/ADRY 14-11/PizzaNicola_Frontend_AspNetCore/PizzaNicola_Frontend_AspNetCore/Views/Pizza/UpdatePizza.cshtml]
+[C:/Users/Usuario/Documents/CIBERTEC/Ciclo Regular VI/DSWII/_DSWII Proyecto T3/Front_DSW/Views/Pizza/UpdatePizza.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGl6emFcVXBkYXRlUGl6emEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/WS-Spring/Proyecto DSW/ADRY 14-11/PizzaNicola_Frontend_AspNetCore/PizzaNicola_Frontend_AspNetCore/Views/Registro/RegisterUsuario.cshtml]
+[C:/Users/Usuario/Documents/CIBERTEC/Ciclo Regular VI/DSWII/_DSWII Proyecto T3/Front_DSW/Views/Registro/RegisterUsuario.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVnaXN0cm9cUmVnaXN0ZXJVc3VhcmlvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/WS-Spring/Proyecto DSW/ADRY 14-11/PizzaNicola_Frontend_AspNetCore/PizzaNicola_Frontend_AspNetCore/Views/Shared/Error.cshtml]
+[C:/Users/Usuario/Documents/CIBERTEC/Ciclo Regular VI/DSWII/_DSWII Proyecto T3/Front_DSW/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/WS-Spring/Proyecto DSW/ADRY 14-11/PizzaNicola_Frontend_AspNetCore/PizzaNicola_Frontend_AspNetCore/Views/Shared/_LayoutLogin.cshtml]
+[C:/Users/Usuario/Documents/CIBERTEC/Ciclo Regular VI/DSWII/_DSWII Proyecto T3/Front_DSW/Views/Shared/_LayoutLogin.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/WS-Spring/Proyecto DSW/ADRY 14-11/PizzaNicola_Frontend_AspNetCore/PizzaNicola_Frontend_AspNetCore/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/Usuario/Documents/CIBERTEC/Ciclo Regular VI/DSWII/_DSWII Proyecto T3/Front_DSW/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/WS-Spring/Proyecto DSW/ADRY 14-11/PizzaNicola_Frontend_AspNetCore/PizzaNicola_Frontend_AspNetCore/Views/_ViewImports.cshtml]
+[C:/Users/Usuario/Documents/CIBERTEC/Ciclo Regular VI/DSWII/_DSWII Proyecto T3/Front_DSW/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/WS-Spring/Proyecto DSW/ADRY 14-11/PizzaNicola_Frontend_AspNetCore/PizzaNicola_Frontend_AspNetCore/Views/_ViewStart.cshtml]
+[C:/Users/Usuario/Documents/CIBERTEC/Ciclo Regular VI/DSWII/_DSWII Proyecto T3/Front_DSW/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/WS-Spring/Proyecto DSW/ADRY 14-11/PizzaNicola_Frontend_AspNetCore/PizzaNicola_Frontend_AspNetCore/Views/Shared/_Layout.cshtml]
+[C:/Users/Usuario/Documents/CIBERTEC/Ciclo Regular VI/DSWII/_DSWII Proyecto T3/Front_DSW/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-6s2oj455fx

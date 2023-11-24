@@ -6,9 +6,12 @@
 
 <h1>Canasta</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
+<div style="display:flex; justify-content: space-between">
+    <p>
+        <a class="btn btn-primary" asp-action="Index" asp-controller="Ecommerce">Volver al Portal</a>
+    </p>
+</div>
+
 <table class="table">
     <thead>
         <tr>
@@ -16,10 +19,10 @@
                 @Html.DisplayNameFor(model => model.id)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.nombreInsumo)
+                @Html.DisplayNameFor(model => model.descripcion)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.descripcion)
+                @Html.DisplayNameFor(model => model.proveedor)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.precio)
@@ -40,10 +43,10 @@
                 @Html.DisplayFor(modelItem => item.id)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.nombreInsumo)
+                @Html.DisplayFor(modelItem => item.descripcion)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.descripcion)
+                @Html.DisplayFor(modelItem => item.proveedor)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.precio)
@@ -55,7 +58,7 @@
                 @Html.DisplayFor(modelItem => item.monto)
             </td>
             <td>
-                @Html.ActionLink("Eliminar", "Delete", new { idInsumo=item.id })
+                @Html.ActionLink("Eliminar", "Delete", new { id=item.id }, new {@class = "btn btn-danger"} )
             </td>
         </tr>
 }

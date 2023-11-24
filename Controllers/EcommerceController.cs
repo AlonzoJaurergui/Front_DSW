@@ -39,7 +39,8 @@ namespace PizzaNicola_AspNetCore.Controllers
                         {
                             id = item.id,
                             nombreInsumo = item.nombreInsumo,
-                            descripcion = item.descripcion,                            
+                            descripcion = item.descripcion,
+                            proveedor = item.proveedor,
                             precio = item.precio,
                             stock = item.stock
                         }).ToList();
@@ -104,6 +105,7 @@ namespace PizzaNicola_AspNetCore.Controllers
                 item.id = insumo.id;
                 item.nombreInsumo = insumo.nombreInsumo;
                 item.descripcion = insumo.descripcion;
+                item.proveedor = insumo.proveedor;
                 item.precio = insumo.precio;
                 item.cantidad = cantidad;
 
@@ -127,11 +129,11 @@ namespace PizzaNicola_AspNetCore.Controllers
             return View(canasta);
         }
 
-        public IActionResult Delete(string idInsumo)
+        public IActionResult Delete(string id)
         {
             List<ItemInsumo> canasta = JsonConvert.DeserializeObject<List<ItemInsumo>>(HttpContext.Session.GetString(_CANASTA));
 
-            ItemInsumo item = canasta.Where(item => item.id == idInsumo).FirstOrDefault();
+            ItemInsumo item = canasta.Where(item => item.id == id).FirstOrDefault();
             canasta.Remove(item);
 
             if(canasta.Count == 0)
